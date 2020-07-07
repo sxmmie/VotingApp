@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{480EA3D5-2044-4B39-A9DC-7EBC836EF0D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sandbox", "Sandbox\Sandbox.csproj", "{480EA3D5-2044-4B39-A9DC-7EBC836EF0D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VotingApp.Tests", "VotingApp.Tests\VotingApp.Tests.csproj", "{EB6C1122-3452-4C14-A9FF-BC75B6FB10E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VotingApp.Tests", "VotingApp.Tests\VotingApp.Tests.csproj", "{EB6C1122-3452-4C14-A9FF-BC75B6FB10E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4B32C208-2950-4D47-A7AF-E8A8BB30B017}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{63276F09-2B8B-4A13-BEC6-0B42E3F21676}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApps", "ConsoleApps", "{09C298A8-C278-4FF5-8BDB-E04A6505E0D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +30,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{480EA3D5-2044-4B39-A9DC-7EBC836EF0D7} = {09C298A8-C278-4FF5-8BDB-E04A6505E0D0}
+		{EB6C1122-3452-4C14-A9FF-BC75B6FB10E0} = {63276F09-2B8B-4A13-BEC6-0B42E3F21676}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9749996-6805-4F14-995C-58E9D8C0DF73}
