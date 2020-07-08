@@ -10,10 +10,6 @@ namespace VotingApp.Tests
         public double Percent { get; set; }
 
         // more generic 
-        internal Counter GetStatistics(int totalCount)
-        {
-            Percent = Math.Round(Count * 100.0 / totalCount, 2);
-            return this;
-        }
+        
     }
 }

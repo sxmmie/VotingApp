@@ -8,6 +8,12 @@ namespace VotingApp.Tests
 {
     public class CounterManager
     {
+        public Counter GetStatistics(int totalCount)
+        {
+            Percent = Math.Round(Count * 100.0 / totalCount, 2);
+            return this;
+        }
+
         public void ResolveExcess(List<Counter> counters)
         {
             if (counters.Sum(x => x.Percent) == 100) return;
