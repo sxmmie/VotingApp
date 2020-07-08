@@ -12,20 +12,13 @@ namespace VotingApp.Tests
         public const string CounterName = "Counter Name";
         public Counter _counter = new Counter { Name = CounterName, Count = 5 };
 
-        // Counter should have a name for it to be displayed
-        [Fact]
-        /*public void HasName()
-        {
-            // Expects name to exist Counter
-            Assert.Equal(CounterName, _counter.Name);
-        }*/
 
         // Get Counter Info
         [Fact]
         public void GetStatistics_IncludesNames()
         {
             // statistics is the info about the counter in regards to other counters
-            var statistics = new CounterManager.GetStatistics(_counter, 5);
+            var statistics = new CounterManager().GetStatistics(_counter, 5);
 
             Assert.Equal(CounterName, statistics.Name);
         }
@@ -34,7 +27,7 @@ namespace VotingApp.Tests
         public void GetStatistics_IncludesCount()
         {
             // statistics is the info about the counter in regards to other counters
-            var statistics = _counter.GetStatistics(5);
+            var statistics = new CounterManager().GetStatistics(_counter, 5);
 
             Assert.Equal(5, statistics.Count);
         }
@@ -46,7 +39,7 @@ namespace VotingApp.Tests
         {
             _counter.Count = count;
 
-            var statistics = _counter.GetStatistics(total);
+            var statistics = new CounterManager().GetStatistics(_counter, total);
 
             Assert.Equal(expected, statistics.Percent);      // this is just one counter
         }

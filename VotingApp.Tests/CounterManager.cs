@@ -10,7 +10,7 @@ namespace VotingApp.Tests
     {
         public Counter GetStatistics(Counter counter, int totalCount)
         {
-            counter.Percent = RoundUp(counter.Count * 100.0 / totalCount, 2);
+            counter.Percent = RoundUp(counter.Count * 100.0 / totalCount);
             return counter;
         }
 
