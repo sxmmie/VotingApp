@@ -8,10 +8,10 @@ namespace VotingApp.Tests
 {
     public class CounterManager
     {
-        public Counter GetStatistics(int totalCount)
+        public Counter GetStatistics(Counter counter, int totalCount)
         {
-            Percent = Math.Round(Count * 100.0 / totalCount, 2);
-            return this;
+            counter.Percent = RoundUp(counter.Count * 100.0 / totalCount);
+            return counter;
         }
 
         public void ResolveExcess(List<Counter> counters)
@@ -31,5 +31,7 @@ namespace VotingApp.Tests
                 counters.First(x => x.Percent == lowestPercent).Percent += 0.1;
             }
         }
+
+        private static double RoundUp(double num) => Math.Round(num, 2);
     }
 }
