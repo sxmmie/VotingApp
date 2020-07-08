@@ -7,18 +7,18 @@ using Xunit;
 
 namespace VotingApp.Tests
 {
-    public class CounterTests
+    public class CounterManagerTests
     {
         public const string CounterName = "Counter Name";
         public Counter _counter = new Counter { Name = CounterName, Count = 5 };
 
         // Counter should have a name for it to be displayed
         [Fact]
-        public void HasName()
+        /*public void HasName()
         {
             // Expects name to exist Counter
             Assert.Equal(CounterName, _counter.Name);
-        }
+        }*/
 
         // Get Counter Info
         [Fact]
