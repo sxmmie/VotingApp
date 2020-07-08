@@ -25,7 +25,7 @@ namespace VotingApp.Tests
         public void GetStatistics_IncludesNames()
         {
             // statistics is the info about the counter in regards to other counters
-            var statistics = _counter.GetStatistics(5);
+            var statistics = new CounterManager.GetStatistics(_counter, 5);
 
             Assert.Equal(CounterName, statistics.Name);
         }
