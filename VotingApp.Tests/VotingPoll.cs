@@ -10,6 +10,6 @@ namespace VotingApp.Tests
             Counters = Enumerable.Empty<Counter>();  // same as new List<Counter> but List occupies space in memory
         }
 
-        public IEnumerable<Counter> Counters { get; }
+        public IEnumerable<Counter> Counters { get; set; }
     }
 }
